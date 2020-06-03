@@ -3,10 +3,12 @@ public class Animal {
     private String tipo;
     private String porte;
 
+
     public void getAnimal(){
         System.out.println("Nome do animal: "+getNome()+"\n"+ "Tipo do animal: "+getTipo()+"\n"+"Porte do animal: "+getPorte());
     }
     public String getNome() {
+
         return Nome;
     }
 
@@ -19,10 +21,12 @@ public class Animal {
     }
 
     public void setTipo(String tipo) {
+
         this.tipo = tipo;
     }
 
     public String getPorte() {
+
         return porte;
     }
 
