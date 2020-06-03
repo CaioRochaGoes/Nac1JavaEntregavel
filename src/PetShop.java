@@ -9,23 +9,38 @@ public class PetShop{
     Animal animal = new Animal();
 
     public int getExaminarAnimal() {
-        System.out.println(examinarAnimal);
+        System.out.println("valor exame animal: "+examinarAnimal);
         return examinarAnimal;
     }
 
-    public void setExaminarAnimal(int examinarAnimal) {
-
-        totalApagar = examinarAnimal + totalApagar;
-        this.examinarAnimal = examinarAnimal;
+    public void setExaminarAnimal() {
+        setTotalApagar(70);
+        this.examinarAnimal = 70;
     }
 
     public int getDarBanhoAnimal() {
-
+        System.out.println("Valor do banho: "+darBanhoAnimal);
         return darBanhoAnimal;
     }
 
-    public void setDarBanhoAnimal(int darBanhoAnimal) {
-        this.darBanhoAnimal = darBanhoAnimal;
+    public void setDarBanhoAnimal(Animal animal) {
+        if (animal.getPorte().equals("pequeno")){
+            setTotalApagar(40);
+            this.darBanhoAnimal = 40;
+        }else {
+            if (animal.getPorte().equals("medio")){
+                setTotalApagar(50);
+                this.darBanhoAnimal = 50;
+            }
+            else {
+                if (animal.getPorte().equals("grande")){
+                    setTotalApagar(60);
+                    this.darBanhoAnimal = 60;
+                }
+            }
+        }
+
+
     }
 
     public int getVacinarAnimal() {
@@ -35,9 +50,14 @@ public class PetShop{
 
     public void setVacinarAnimal(Animal animal) {
         if ((animal.getTipo().equals("cachorro"))||(animal.getTipo().equals("gato"))){
+            setTotalApagar(100);
             this.vacinarAnimal = 100;
+
+        }else {
+            setTotalApagar(150);
+            this.vacinarAnimal = 150;
         }
-        this.vacinarAnimal = 150;
+
 
 
     }
@@ -48,6 +68,6 @@ public class PetShop{
     }
 
     public void setTotalApagar(int totalApagar) {
-        this.totalApagar = totalApagar;
+        this.totalApagar = totalApagar + this.totalApagar;
     }
 }
