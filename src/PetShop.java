@@ -6,7 +6,13 @@ public class PetShop{
     private int vacinarAnimal;
     private int totalApagar;
 
-    Animal animal = new Animal();
+    public void extrato (){
+        getDarBanhoAnimal();
+        getExaminarAnimal();
+        getVacinarAnimal();
+        getTotalApagar();
+        System.out.println("---------------------------------");
+    }
 
     public int getExaminarAnimal() {
         System.out.println("valor exame animal: "+examinarAnimal);
@@ -18,8 +24,8 @@ public class PetShop{
         this.examinarAnimal = 70;
     }
 
-    public int getDarBanhoAnimal() {
-        System.out.println("Valor do banho: "+darBanhoAnimal);
+    public int getDarBanhoAnimal( ) {
+
         return darBanhoAnimal;
     }
 
@@ -68,6 +74,7 @@ public class PetShop{
     }
 
     public void setTotalApagar(int totalApagar) {
+
         this.totalApagar = totalApagar + this.totalApagar;
     }
 }

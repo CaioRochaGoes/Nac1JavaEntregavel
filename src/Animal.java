@@ -5,15 +5,17 @@ public class Animal {
 
 
     public void getAnimal(){
-        System.out.println("Nome do animal: "+getNome()+"\n"+ "Tipo do animal: "+getTipo()+"\n"+"Porte do animal: "+getPorte());
+        System.out.println("---------------------------------");
+        System.out.println("Nome do animal: "+getNome().toUpperCase()+"\n"+ "Tipo do animal: "+getTipo().toUpperCase()+
+                "\n"+"Porte do animal: "+getPorte().toUpperCase());
+
     }
     public String getNome() {
-
         return Nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.Nome = nome;
     }
 
     public String getTipo() {
@@ -21,12 +23,10 @@ public class Animal {
     }
 
     public void setTipo(String tipo) {
-
         this.tipo = tipo;
     }
 
     public String getPorte() {
-
         return porte;
     }
 
